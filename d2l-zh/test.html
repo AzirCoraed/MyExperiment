@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>PyTorch深度学习思维导图</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .mindmap {
+            margin-left: 20px;
+        }
+        .node {
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        .node::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 15px;
+            height: 1px;
+            background: #666;
+        }
+        .node-parent {
+            font-weight: bold;
+            color: #2c3e50;
+            border-left: 2px solid #3498db;
+            padding-left: 10px;
+            margin-top: 15px;
+        }
+        .node-parent::before {
+            display: none;
+        }
+        .chapter {
+            margin-top: 25px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .chapter::before {
+            display: none;
+        }
+        .node-content {
+            font-size: 14px;
+            color: #666;
+            margin-top: 2px;
+        }
+        .main-title {
+            text-align: center;
+            color: #34495e;
+            font-size: 24px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #34495e;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">PyTorch深度学习思维导图</h1>
+    
+    <div class="mindmap">
+        <div class="chapter">1. 前言与安装</div>
+        <div class="node node-parent">前言</div>
+        <div class="node">
+            <div>前言和使用指南</div>
+            <div class="node-content">介绍了深度学习书籍的目标、结构和使用方法</div>
+        </div>
+        <div class="node node-parent">安装与配置</div>
+        <div class="node">
+            <div>安装指南</div>
+            <div class="node-content">PyTorch环境配置与安装步骤</div>
+        </div>
+        <div class="node">
+            <div>Jupyter环境配置</div>
+            <div class="node-content">如何设置和使用Jupyter notebook</div>
+        </div>
+        
+        <div class="chapter">2. 引言</div>
+        <div class="node node-parent">深度学习基础</div>
+        <div class="node">
+            <div>深度学习介绍</div>
+            <div class="node-content">深度学习的历史、应用和关键概念</div>
+        </div>
+        
+        <div class="chapter">3. 预备知识</div>
+        <div class="node node-parent">数学基础</div>
+        <div class="node">
+            <div>微积分</div>
+            <div class="node-content">深度学习中的微积分基础知识</div>
+        </div>
+        <div class="node">
+            <div>线性代数</div>
+            <div class="node-content">向量、矩阵运算和分解方法</div>
+        </div>
+        <div class="node">
+            <div>概率论</div>
+            <div class="node-content">概率分布与统计学基础</div>
+        </div>
+        <div class="node node-parent">PyTorch基础</div>
+        <div class="node">
+            <div>多维数组操作</div>
+            <div class="node-content">张量创建、变形和运算</div>
+        </div>
+        <div class="node">
+            <div>自动微分</div>
+            <div class="node-content">PyTorch中的自动求导机制</div>
+        </div>
+        <div class="node">
+            <div>API查询</div>
+            <div class="node-content">如何有效查阅PyTorch文档</div>
+        </div>
+        <div class="node">
+            <div>数据处理</div>
+            <div class="node-content">使用pandas处理和分析数据</div>
+        </div>
+        
+        <div class="chapter">4. 线性神经网络</div>
+        <div class="node node-parent">线性回归</div>
+        <div class="node">
+            <div>线性回归原理</div>
+            <div class="node-content">模型表示、损失函数和优化方法</div>
+        </div>
+        <div class="node">
+            <div>从零实现</div>
+            <div class="node-content">手动实现线性回归的所有组件</div>
+        </div>
+        <div class="node">
+            <div>简洁实现</div>
+            <div class="node-content">使用PyTorch高级API实现线性回归</div>
+        </div>
+        <div class="node node-parent">Softmax回归</div>
+        <div class="node">
+            <div>图像分类数据集</div>
+            <div class="node-content">数据集加载与预处理</div>
+        </div>
+        <div class="node">
+            <div>从零实现</div>
+            <div class="node-content">手动实现Softmax回归</div>
+        </div>
+        <div class="node">
+            <div>简洁实现</div>
+            <div class="node-content">使用PyTorch高级API实现Softmax回归</div>
+        </div>
+        
+        <div class="chapter">5. 多层感知机</div>
+        <div class="node node-parent">基础组件</div>
+        <div class="node">
+            <div>多层感知机原理</div>
+            <div class="node-content">网络结构、激活函数和前向传播</div>
+        </div>
+        <div class="node">
+            <div>从零实现</div>
+            <div class="node-content">手动构建多层感知机的各个组件</div>
+        </div>
+        <div class="node">
+            <div>简洁实现</div>
+            <div class="node-content">使用PyTorch层构建多层感知机</div>
+        </div>
+        <div class="node node-parent">训练技巧</div>
+        <div class="node">
+            <div>欠拟合与过拟合</div>
+            <div class="node-content">模型容量、过拟合和欠拟合的判断方法</div>
+        </div>
+        <div class="node">
+            <div>权重衰减</div>
+            <div class="node-content">L2正则化实现与效果</div>
+        </div>
+        <div class="node">
+            <div>Dropout</div>
+            <div class="node-content">随机失活正则化方法</div>
+        </div>
+        <div class="node">
+            <div>数值稳定性与初始化</div>
+            <div class="node-content">参数初始化方法与梯度消失/爆炸问题</div>
+        </div>
+        <div class="node">
+            <div>反向传播</div>
+            <div class="node-content">自动微分与梯度计算</div>
+        </div>
+        <div class="node node-parent">实战应用</div>
+        <div class="node">
+            <div>Kaggle房价预测</div>
+            <div class="node-content">实际数据集上的回归任务实战</div>
+        </div>
+        
+        <div class="chapter">6. 深度学习计算</div>
+        <div class="node node-parent">模型设计</div>
+        <div class="node">
+            <div>模型构建方法</div>
+            <div class="node-content">不同的模型定义和构建方式</div>
+        </div>
+        <div class="node">
+            <div>参数管理</div>
+            <div class="node-content">参数访问、初始化和共享</div>
+        </div>
+        <div class="node">
+            <div>自定义层</div>
+            <div class="node-content">创建自定义的网络层</div>
+        </div>
+        <div class="node node-parent">模型初始化</div>
+        <div class="node">
+            <div>延迟初始化</div>
+            <div class="node-content">PyTorch中的延迟初始化机制</div>
+        </div>
+        <div class="node">
+            <div>懒惰初始化</div>
+            <div class="node-content">延迟初始化的实际应用</div>
+        </div>
+        <div class="node node-parent">模型操作</div>
+        <div class="node">
+            <div>文件读写</div>
+            <div class="node-content">模型参数的保存与加载</div>
+        </div>
+        <div class="node">
+            <div>GPU基础</div>
+            <div class="node-content">GPU计算的基本原理</div>
+        </div>
+        <div class="node">
+            <div>GPU使用</div>
+            <div class="node-content">如何使用GPU加速深度学习计算</div>
+        </div>
+        
+        <div class="chapter">7. 卷积神经网络</div>
+        <div class="node node-parent">卷积基础</div>
+        <div class="node">
+            <div>卷积层</div>
+            <div class="node-content">卷积层的原理、实现与可视化</div>
+        </div>
+        <div class="node">
+            <div>填充与步幅</div>
+            <div class="node-content">卷积操作中的填充和步幅参数</div>
+        </div>
+        <div class="node">
+            <div>多通道</div>
+            <div class="node-content">多输入/输出通道的卷积操作</div>
+        </div>
+        <div class="node">
+            <div>池化层</div>
+            <div class="node-content">最大池化和平均池化的原理与实现</div>
+        </div>
+        <div class="node node-parent">经典网络</div>
+        <div class="node">
+            <div>LeNet</div>
+            <div class="node-content">最早的卷积神经网络之一，用于手写数字识别</div>
+        </div>
+        
+        <div class="chapter">8. 现代卷积神经网络</div>
+        <div class="node node-parent">经典架构</div>
+        <div class="node">
+            <div>AlexNet</div>
+            <div class="node-content">深度学习复兴的标志性网络</div>
+        </div>
+        <div class="node">
+            <div>VGG</div>
+            <div class="node-content">使用统一的卷积块堆叠的网络</div>
+        </div>
+        <div class="node">
+            <div>网络中的网络(NiN)</div>
+            <div class="node-content">使用1×1卷积的网络架构</div>
+        </div>
+        <div class="node">
+            <div>GoogleNet/Inception</div>
+            <div class="node-content">多路径并行卷积的网络架构</div>
+        </div>
+        <div class="node node-parent">网络改进</div>
+        <div class="node">
+            <div>批量归一化</div>
+            <div class="node-content">加速训练和提高稳定性的技术</div>
+        </div>
+        <div class="node">
+            <div>残差网络(ResNet)</div>
+            <div class="node-content">使用跳跃连接的深度网络</div>
+        </div>
+        <div class="node">
+            <div>密集连接网络(DenseNet)</div>
+            <div class="node-content">每层与前面所有层相连的网络</div>
+        </div>
+        
+        <div class="chapter">9. 循环神经网络</div>
+        <div class="node node-parent">序列建模</div>
+        <div class="node">
+            <div>序列模型</div>
+            <div class="node-content">序列数据处理的基本概念</div>
+        </div>
+        <div class="node">
+            <div>文本预处理</div>
+            <div class="node-content">文本数据的清洗、分词和编码</div>
+        </div>
+        <div class="node node-parent">语言模型</div>
+        <div class="node">
+            <div>语言模型原理</div>
+            <div class="node-content">统计语言模型和神经语言模型</div>
+        </div>
+        <div class="node">
+            <div>语言模型数据集</div>
+            <div class="node-content">文本数据集的处理与加载</div>
+        </div>
+        <div class="node node-parent">循环神经网络</div>
+        <div class="node">
+            <div>RNN原理</div>
+            <div class="node-content">循环神经网络的数学基础</div>
+        </div>
+        <div class="node">
+            <div>从零实现</div>
+            <div class="node-content">手动实现循环神经网络</div>
+        </div>
+        <div class="node">
+            <div>简洁实现</div>
+            <div class="node-content">使用PyTorch API实现RNN</div>
+        </div>
+        
+        <div class="chapter">10. 现代循环神经网络</div>
+        <div class="node node-parent">高级RNN</div>
+        <div class="node">
+            <div>门控循环单元(GRU)</div>
+            <div class="node-content">使用门控机制的RNN变体</div>
+        </div>
+        <div class="node">
+            <div>长短期记忆网络(LSTM)</div>
+            <div class="node-content">解决长序列依赖问题的网络</div>
+        </div>
+        <div class="node">
+            <div>深层RNN</div>
+            <div class="node-content">多层循环神经网络</div>
+        </div>
+        <div class="node">
+            <div>双向RNN</div>
+            <div class="node-content">同时考虑过去和未来信息的RNN</div>
+        </div>
+        <div class="node node-parent">序列到序列模型</div>
+        <div class="node">
+            <div>编码器</div>
+            <div class="node-content">将输入序列编码为表示</div>
+        </div>
+        <div class="node">
+            <div>解码器</div>
+            <div class="node-content">从编码生成输出序列</div>
+        </div>
+        <div class="node">
+            <div>编码器-解码器</div>
+            <div class="node-content">完整的序列到序列架构</div>
+        </div>
+        <div class="node">
+            <div>Seq2Seq模型</div>
+            <div class="node-content">用于机器翻译等任务的模型</div>
+        </div>
+        <div class="node">
+            <div>束搜索</div>
+            <div class="node-content">解码过程中的搜索算法</div>
+        </div>
+        <div class="node">
+            <div>机器翻译数据集</div>
+            <div class="node-content">翻译任务的数据准备</div>
+        </div>
+        
+        <div class="chapter">11. 注意力机制</div>
+        <div class="node node-parent">注意力基础</div>
+        <div class="node">
+            <div>注意力提示</div>
+            <div class="node-content">注意力机制的基本概念和直觉理解</div>
+        </div>
+        <div class="node">
+            <div>注意力评分函数</div>
+            <div class="node-content">不同类型的注意力评分方法</div>
+        </div>
+        <div class="node">
+            <div>Bahdanau注意力</div>
+            <div class="node-content">加性注意力机制详解</div>
+        </div>
+        <div class="node">
+            <div>Nadaraya-Watson核回归</div>
+            <div class="node-content">注意力机制的统计学前身</div>
+        </div>
+        <div class="node node-parent">自注意力</div>
+        <div class="node">
+            <div>自注意力与位置编码</div>
+            <div class="node-content">序列内部的注意力机制与位置信息</div>
+        </div>
+        <div class="node">
+            <div>多头注意力</div>
+            <div class="node-content">并行注意力头的实现</div>
+        </div>
+        <div class="node">
+            <div>Transformer</div>
+            <div class="node-content">基于自注意力的序列转换模型</div>
+        </div>
+        
+        <div class="chapter">12. 优化算法</div>
+        <div class="node node-parent">优化基础</div>
+        <div class="node">
+            <div>优化介绍</div>
+            <div class="node-content">深度学习中的优化问题概述</div>
+        </div>
+        <div class="node">
+            <div>凸优化</div>
+            <div class="node-content">凸函数优化的理论基础</div>
+        </div>
+        <div class="node node-parent">梯度下降变体</div>
+        <div class="node">
+            <div>梯度下降</div>
+            <div class="node-content">批量梯度下降的原理与实现</div>
+        </div>
+        <div class="node">
+            <div>随机梯度下降</div>
+            <div class="node-content">使用单个样本的梯度下降</div>
+        </div>
+        <div class="node">
+            <div>小批量随机梯度下降</div>
+            <div class="node-content">使用小批量数据的梯度下降</div>
+        </div>
+        <div class="node node-parent">高级优化算法</div>
+        <div class="node">
+            <div>动量法</div>
+            <div class="node-content">使用历史梯度信息的优化</div>
+        </div>
+        <div class="node">
+            <div>AdaGrad</div>
+            <div class="node-content">自适应学习率方法</div>
+        </div>
+        <div class="node">
+            <div>RMSProp</div>
+            <div class="node-content">均方根传播优化算法</div>
+        </div>
+        <div class="node">
+            <div>Adam</div>
+            <div class="node-content">结合动量和自适应学习率的方法</div>
+        </div>
+        <div class="node">
+            <div>学习率调度</div>
+            <div class="node-content">学习率动态调整策略</div>
+        </div>
+        
+        <div class="chapter">13. 计算性能</div>
+        <div class="node node-parent">性能优化</div>
+        <div class="node">
+            <div>硬件</div>
+            <div class="node-content">深度学习硬件性能分析</div>
+        </div>
+        <div class="node">
+            <div>混合编程</div>
+            <div class="node-content">结合命令式和符号式编程</div>
+        </div>
+        <div class="node">
+            <div>异步计算</div>
+            <div class="node-content">并行执行操作提高效率</div>
+        </div>
+        <div class="node">
+            <div>自动并行</div>
+            <div class="node-content">框架自动优化的并行计算</div>
+        </div>
+        <div class="node node-parent">多设备训练</div>
+        <div class="node">
+            <div>多GPU训练详解</div>
+            <div class="node-content">从零实现多GPU并行训练</div>
+        </div>
+        <div class="node">
+            <div>多GPU简洁实现</div>
+            <div class="node-content">使用PyTorch API实现多GPU训练</div>
+        </div>
+        <div class="node">
+            <div>参数服务器</div>
+            <div class="node-content">分布式训练的参数同步架构</div>
+        </div>
+        
+        <div class="chapter">14. 计算机视觉</div>
+        <div class="node node-parent">图像处理</div>
+        <div class="node">
+            <div>图像增强</div>
+            <div class="node-content">数据增强技术提高模型泛化能力</div>
+        </div>
+        <div class="node">
+            <div>微调</div>
+            <div class="node-content">使用预训练模型进行迁移学习</div>
+        </div>
+        <div class="node node-parent">目标检测</div>
+        <div class="node">
+            <div>边界框</div>
+            <div class="node-content">目标检测中的边界框表示</div>
+        </div>
+        <div class="node">
+            <div>锚框</div>
+            <div class="node-content">预设边界框生成与匹配</div>
+        </div>
+        <div class="node">
+            <div>目标检测数据集</div>
+            <div class="node-content">检测任务的数据处理</div>
+        </div>
+        <div class="node">
+            <div>单发多框检测(SSD)</div>
+            <div class="node-content">一阶段目标检测算法</div>
+        </div>
+        <div class="node">
+            <div>区域卷积神经网络(R-CNN)</div>
+            <div class="node-content">基于区域提议的检测算法</div>
+        </div>
+        <div class="node node-parent">语义分割</div>
+        <div class="node">
+            <div>语义分割与数据集</div>
+            <div class="node-content">像素级别分类任务</div>
+        </div>
+        <div class="node">
+            <div>转置卷积</div>
+            <div class="node-content">上采样的卷积操作</div>
+        </div>
+        <div class="node node-parent">风格迁移</div>
+        <div class="node">
+            <div>神经风格迁移</div>
+            <div class="node-content">将艺术风格应用于内容图像</div>
+        </div>
+        
+        <div class="chapter">15. 自然语言处理：预训练</div>
+        <div class="node node-parent">词嵌入</div>
+        <div class="node">
+            <div>词嵌入数据集</div>
+            <div class="node-content">词向量训练数据准备</div>
+        </div>
+        <div class="node">
+            <div>Word2Vec</div>
+            <div class="node-content">基于上下文的词向量学习</div>
+        </div>
+        <div class="node">
+            <div>Word2Vec预训练</div>
+            <div class="node-content">词向量的训练过程</div>
+        </div>
+        <div class="node">
+            <div>GloVe</div>
+            <div class="node-content">基于全局统计的词向量</div>
+        </div>
+        <div class="node">
+            <div>子词嵌入</div>
+            <div class="node-content">处理词汇外单词的嵌入方法</div>
+        </div>
+        <div class="node node-parent">BERT</div>
+        <div class="node">
+            <div>BERT模型</div>
+            <div class="node-content">双向Transformer编码器表示</div>
+        </div>
+        <div class="node">
+            <div>BERT数据集</div>
+            <div class="node-content">预训练任务的数据准备</div>
+        </div>
+        
+        <div class="chapter">16. 自然语言处理：应用</div>
+        <div class="node node-parent">情感分析</div>
+        <div class="node">
+            <div>情感分析与数据集</div>
+            <div class="node-content">文本情感极性分类</div>
+        </div>
+        <div class="node">
+            <div>基于RNN的情感分析</div>
+            <div class="node-content">使用循环神经网络进行文本分类</div>
+        </div>
+        <div class="node">
+            <div>基于CNN的情感分析</div>
+            <div class="node-content">使用卷积神经网络处理文本</div>
+        </div>
+        <div class="node node-parent">自然语言推理</div>
+        <div class="node">
+            <div>自然语言推理与数据集</div>
+            <div class="node-content">句子逻辑关系推断任务</div>
+        </div>
+        <div class="node">
+            <div>基于注意力的自然语言推理</div>
+            <div class="node-content">使用注意力机制处理句对关系</div>
+        </div>
+        <div class="node node-parent">BERT应用</div>
+        <div class="node">
+            <div>BERT模型应用</div>
+            <div class="node-content">BERT模型的下游任务应用</div>
+        </div>
+        <div class="node">
+            <div>BERT数据准备</div>
+            <div class="node-content">使用BERT的数据处理</div>
+        </div>
+        <div class="node">
+            <div>BERT预训练过程</div>
+            <div class="node-content">掩码语言模型和下一句预测</div>
+        </div>
+        <div class="node">
+            <div>BERT自然语言推理</div>
+            <div class="node-content">使用BERT进行推理任务</div>
+        </div>
+        
+        <div class="chapter">17. 推荐系统</div>
+        <div class="node node-parent">基础推荐</div>
+        <div class="node">
+            <div>MovieLens数据集</div>
+            <div class="node-content">电影评分数据集处理</div>
+        </div>
+        <div class="node">
+            <div>矩阵分解</div>
+            <div class="node-content">协同过滤的矩阵分解方法</div>
+        </div>
+        <div class="node">
+            <div>自编码器推荐</div>
+            <div class="node-content">基于自编码器的协同过滤</div>
+        </div>
+        <div class="node node-parent">高级推荐</div>
+        <div class="node">
+            <div>排序</div>
+            <div class="node-content">推荐系统中的排序算法</div>
+        </div>
+        <div class="node">
+            <div>序列推荐</div>
+            <div class="node-content">考虑用户行为序列的推荐</div>
+        </div>
+        <div class="node">
+            <div>点击率预测</div>
+            <div class="node-content">预测用户点击概率的模型</div>
+        </div>
+        <div class="node">
+            <div>DeepFM</div>
+            <div class="node-content">结合因子分解机和深度网络</div>
+        </div>
+        
+        <div class="chapter">18. 生成对抗网络</div>
+        <div class="node node-parent">GAN基础</div>
+        <div class="node">
+            <div>生成对抗网络</div>
+            <div class="node-content">生成器与判别器的对抗训练</div>
+        </div>
+        <div class="node">
+            <div>深度卷积GAN</div>
+            <div class="node-content">使用卷积架构的GAN实现</div>
+        </div>
+        
+        <div class="chapter">19. 深度学习工具</div>
+        <div class="node node-parent">开发环境</div>
+        <div class="node">
+            <div>Jupyter笔记本</div>
+            <div class="node-content">交互式开发环境使用指南</div>
+        </div>
+        <div class="node">
+            <div>SageMaker</div>
+            <div class="node-content">云端训练与部署平台</div>
+        </div>
+        <div class="node">
+            <div>服务器与GPU选择</div>
+            <div class="node-content">硬件配置指南与建议</div>
+        </div>
+        <div class="node">
+            <div>d2l工具库</div>
+            <div class="node-content">深度学习工具包API文档</div>
+        </div>
+    </div>
+</body>
+</html>
